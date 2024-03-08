@@ -4,12 +4,13 @@ export default {
   data() {
     return {
       customers: [],
-      name: '',
-      phone: '',
-      document: '',
-      email: '',
+      key: null,
+      name: null,
+      phone: null,
+      document: null,
+      email: null,
       active: false,
-      registerForm: false
+      customerForm: false
     }
   },
 
@@ -24,21 +25,42 @@ export default {
 
   methods: {
     async submitCustomer() {
-      try {
-        const response = await axios.post('https://customer-products-test-default-rtdb.firebaseio.com/customer.json',
-        {
-          name: this.name,
-          phone: this.phone,
-          document: this.document,
-          email: this.email,
-          active: this.active,
-          products: []
-        })
-        if(response.status = 200) {
-          location.reload()
+      if(this.key) {
+        
+        try {
+          const responsePatchCustomer = await axios.patch(`https://customer-products-test-default-rtdb.firebaseio.com/customer/${this.key}.json`,
+          {
+            name: this.name,
+            phone: this.phone,
+            document: this.document,
+            email: this.email,
+            active: this.active,
+            products: []
+          })
+          if(responsePatchCustomer.status === 200) {
+            location.reload()
+          }
+        } catch(err) {
+          console.error("Error to update the customer: ", error)
         }
-      } catch (err) {
-        console.error('Error on POST request:', err)
+
+      } else {
+        try {
+          const responsePostCustomer = await axios.post('https://customer-products-test-default-rtdb.firebaseio.com/customer.json',
+          {
+            name: this.name,
+            phone: this.phone,
+            document: this.document,
+            email: this.email,
+            active: this.active,
+            products: []
+          })
+          if(responsePostCustomer.status = 200) {
+            location.reload()
+          }
+        } catch (err) {
+          console.error('Error on POST request:', err)
+        }
       }
     },
 
@@ -53,8 +75,28 @@ export default {
       }
     },
 
-    openRegisterForm () {
-      this.registerForm = true
+    editCustomer(name, status, document, email, phone, index) {
+      this.customerForm = true
+      this.key = index
+      this.name = name
+      this.active = status
+      this.document = document
+      this.email = email
+      this.phone = phone
+    },
+
+    registerCustomer () {
+      this.customerForm = true
+      this.key = null
+      this.name = null
+      this.active = false
+      this.document = null
+      this.email = null
+      this.phone = null
+    },
+
+    closeCustomerForm() {
+      this.customerForm = false
     }
   }
 }
@@ -67,26 +109,27 @@ export default {
       <div v-for="(customer, index) in customers" key="customer">
         {{ customer.name }}
         {{ customer.active ? "active" : "inactivated" }}
-        <button>Edit</button>
+        <button @click="editCustomer(customer.name, customer.active, customer.document, customer.email, customer.phone, index)">Edit</button>
         <button @click="deleteCustomer(index)">Delete</button>
       </div>
-      <button @click="openRegisterForm">Register New User</button>
+      <button @click="registerCustomer()">Register New User</button>
     </div>
   </div>
 
-  <div v-if="registerForm">
+  <div v-if="customerForm">
     <form @submit.prevent="submitCustomer">
       <label for="name">Customer Name</label>
-      <input type="text" v-model="name">
+      <input placeholder="name" type="text" v-model="name">
       <label for="number">Phone Number</label>
-      <input type="text" v-model="phone">
+      <input placeholder="phone" type="text" v-model="phone">
       <label for="document">Document Number</label>
-      <input type="text" v-model="document">
+      <input placeholder="document" type="text" v-model="document">
       <label for="email">E-mail</label>
-      <input type="text" v-model="email">
+      <input placeholder="email" type="text" v-model="email">
       <label for="active">Active</label>
-      <input type="checkbox" v-model="active">
+      <input placeholder="active" type="checkbox" v-model="active">
       <button type="submit">Submit</button>
+      <button @click="closeCustomerForm">Cancel</button>
     </form>
   </div>
 </template>

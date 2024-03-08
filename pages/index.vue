@@ -28,6 +28,7 @@ export default {
 
 <template>
   <h2>User and Products</h2>
+  <span>(Only actives)</span>
   <div>
     <div v-for="customer in customers">
       <span >
@@ -39,8 +40,6 @@ export default {
         {{ product.name }}
       </span>
     </div>
-    <div>Customer</div>
-    <div>Products</div>
   </div>
 </template>
 
