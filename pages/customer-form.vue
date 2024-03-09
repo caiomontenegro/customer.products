@@ -35,7 +35,6 @@ export default {
             document: this.document,
             email: this.email,
             active: this.active,
-            products: []
           })
           if(responsePatchCustomer.status === 200) {
             location.reload()
@@ -53,7 +52,7 @@ export default {
             document: this.document,
             email: this.email,
             active: this.active,
-            products: []
+            products: [],
           })
           if(responsePostCustomer.status = 200) {
             location.reload()
