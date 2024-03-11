@@ -8,9 +8,9 @@
 Trata-se de um micro serviço CRUD, que contempla as seguintes funções:
 
 - Cadastro de Cliente.
-- Cadastro de Items.
+- Cadastro de Itens.
 - Edição de itens e clientes.
-- Vinculo de itens aos clientes.
+- Vínculo de itens aos clientes.
 
 Tecnologias usadas:
 
@@ -63,7 +63,7 @@ https://git-scm.com/
     cd customer.project
 
 5 - Após baixar o projeto, rode o abaixo para instalar todos os pacotes
-e dependencias necessários para rodar o projeto:
+e dependências necessárias para rodar o projeto:
 
     yarn 
 
@@ -92,7 +92,7 @@ sem a necessidade de um manual ou tutorial de uso.
 Sendo assim, fique a vontade para "esmiuçar". Caso não entenda algo, ou fique
 com dúvidas em determinado ponto, significa que o teste foi falho neste ponto.
 Porém não hesite em entrar em contato comigo para expor o erro. Meus contatos
-estão no rodapé deste documento!
+estão no rodapé deste documento.
 
 
 </br></br></br>
@@ -113,13 +113,13 @@ de requisições HTTP (Desempenho)
 - SASS - A aplicação foi estilizada por SCSS, que oferece inúmeras funcionalidades nas quais
 não foram implementadas, por se tratar de projeto pequeno. Por exemplo:
 Fazer uso das propriedades SASS.  (Padronização e desempenho)
-- Cypress - Escrever testes e2e, de todas as funcionadalides, ancoras, botões, intereções
+- Cypress - Escrever testes e2e, de todas as funcionadalides, âncoras, botões, intereções
 e também um mock local para consultas, em caso de API FIrebase fora do ar.
-A principio, os testes seriam feitos, porém devido a falta de tempo para o desenvolvimento. O
+A princípio, os testes seriam feitos, porém devido a falta de tempo para o desenvolvimento. O
 mesmo será feito posteriormente.
 - API para validação do documento do cliente cadastro, dessa forma podemos melhorar a validação
 de usuários, e também refinar a regra cadastro em duplicidade.
-- Componenttização - Componentização do formulário, usando slots e javascripts para 
+- Componentização - Componentização do formulário, usando slots e javascripts para 
 criar os inputs e labels nas páginas.
 - Eslint - Para padronização, escalabilidade e melhoria na manutenção do código. Essencial
 para todos os tipos de desenvolvimentos.
