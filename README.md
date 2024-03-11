@@ -3,8 +3,6 @@
 <h2>Introdução</h2>
 
 <p>Este é um um teste de desenvolvimento front-end Vue.js</p>
-<img src="assets/img/home.png" alt="homepage">
-</br>
 <img src="assets/img/mobile.png" alt="mobile">
 
 Trata-se de um micro serviço CRUD, que contempla as seguintes funções:
