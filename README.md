@@ -115,8 +115,8 @@ não foram implementadas, por se tratar de projeto pequeno. Por exemplo:
 Fazer uso das propriedades SASS.  (Padronização e desempenho)
 - Cypress - Escrever testes e2e, de todas as funcionadalides, âncoras, botões, intereções
 e também um mock local para consultas, em caso de API FIrebase fora do ar.
-A princípio, os testes seriam feitos, porém devido a falta de tempo para o desenvolvimento. O
-mesmo será feito posteriormente.
+A princípio, os testes seriam feitos, porém devido a falta de tempo para o desenvolvimento, 
+será feito posteriormente.
 - API para validação do documento do cliente cadastro, dessa forma podemos melhorar a validação
 de usuários, e também refinar a regra cadastro em duplicidade.
 - Componentização - Componentização do formulário, usando slots e javascripts para 
