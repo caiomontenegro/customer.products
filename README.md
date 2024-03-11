@@ -3,6 +3,9 @@
 <h2>Introdução</h2>
 
 <p>Este é um um teste de desenvolvimento front-end Vue.js</p>
+<img src="assets/img/home.png" alt="homepage">
+</br>
+<img src="assets/img/mobile.png" alt="mobile">
 
 Trata-se de um micro serviço CRUD, que contempla as seguintes funções:
 
@@ -116,6 +119,8 @@ Fazer uso das propriedades SASS.  (Padronização e desempenho)
 e também um mock local para consultas, em caso de API FIrebase fora do ar.
 A principio, os testes seriam feitos, porém devido a falta de tempo para o desenvolvimento. O
 mesmo será feito posteriormente.
+- API para validação do documento do cliente cadastro, dessa forma podemos melhorar a validação
+de usuários, e também refinar a regra cadastro em duplicidade.
 - Componenttização - Componentização do formulário, usando slots e javascripts para 
 criar os inputs e labels nas páginas.
 - Eslint - Para padronização, escalabilidade e melhoria na manutenção do código. Essencial
