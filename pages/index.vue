@@ -79,8 +79,11 @@ export default {
     <h2>Link Itens Micro Service</h2>
   </div>
   <section class="customer">
-    <div class="customer__instruction">
+    <div v-if="customers" class="customer__instruction">
       <span>Click on customer to expand him</span>
+    </div>
+    <div v-else class="title">
+      We don't have active customers yet, please access"Customers" to register a new, or active someone.
     </div>
     <div v-for="(customer, customerIndex) in customers" class="customer__box">
       <div v-if="customer.active">
@@ -94,20 +97,23 @@ export default {
               </FormButton>
             </div>
             <div v-else>
-              Nothing items linked fot this customer
+              Nothing items linked for this customer
             </div>
           </div>
           <form @submit.prevent="addItem(customerIndex)">
-            <label for="items">Available items to add</label>
-            <div class="customer__inputs">
-              <FormSelect v-model="productId" name="items">
+            <label v-if="products" for="items">Available items to add</label>
+            <div v-if="products"  class="customer__inputs">
+              <select v-model="productId" name="items">
                 <option v-for="(product, productIndex) in products" :key="productIndex" :value="productIndex">
                   {{ product.active ? product.name : null }}
                 </option>
-              </FormSelect>
+              </select>
               <FormButton class="formButton--blue">
                 Add item
               </FormButton>
+            </div>
+            <div v-else class="title">
+              We don't have active products, please access de Products page to register a new, or active someone.
             </div>
           </form>
         </div>
@@ -163,6 +169,14 @@ export default {
     justify-content: space-evenly;
     margin: 15px 0px 5px ;
   }
+}
+
+select {
+  min-width: 250px;
+  border: solid 2px white;
+  border-radius: 3px;
+  background: orangered;
+  color: white;
 }
 
 .showData {

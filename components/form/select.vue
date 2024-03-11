@@ -3,6 +3,7 @@ export default {
   methods: {
     handleSelectChange(event) {
       this.$emit('update:modelValue', event.target.value);
+      console.log(event.target.value)
     }
   }
 }

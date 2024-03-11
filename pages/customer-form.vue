@@ -30,38 +30,37 @@ export default {
         console.log('campos em branco')
         this.invalidForm = true
       } else {
-        // console.log('campos preenchidos')
-        // console.log('name ', this.name, 'phone ', this.phone, 'document ', this.document, 'email ', this.email)
         this.invalidForm = false
       }
     },
 
     async submitCustomer() {
       if(this.key) {
-
-        try {
-          const responsePatchCustomer = await axios.patch(`https://customer-products-test-default-rtdb.firebaseio.com/customer/${this.key}.json`,
-          {
-            name: this.name,
-            phone: this.phone,
-            document: this.document,
-            email: this.email,
-            active: this.active,
-          })
-          if(responsePatchCustomer.status === 200) {
-            location.reload()
+        this.checkfields()
+        if(this.invalidForm) {
+          return
+        } else {
+          try {
+            const responsePatchCustomer = await axios.patch(`https://customer-products-test-default-rtdb.firebaseio.com/customer/${this.key}.json`,
+            {
+              name: this.name,
+              phone: this.phone,
+              document: this.document,
+              email: this.email,
+              active: this.active,
+            })
+            if(responsePatchCustomer.status === 200) {
+              location.reload()
+            }
+          } catch(err) {
+            console.error("Error to update the customer: ", error)
           }
-        } catch(err) {
-          console.error("Error to update the customer: ", error)
         }
-
       } else {
         this.checkfields()
         if(this.invalidForm) {
-          console.log(this.invalidForm)
           return
         } else {
-          console.log(this.invalidForm)
           try {
             const responsePostCustomer = await axios.post('https://customer-products-test-default-rtdb.firebaseio.com/customer.json',
             {
@@ -73,7 +72,7 @@ export default {
               products: [],
             })
             if(responsePostCustomer.status = 200) {
-              // location.reload()
+              location.reload()
             }
           } catch (err) {
             console.error('Error on POST request:', err)
@@ -214,6 +213,7 @@ export default {
   &__alert {
     display: none;
     color: red;
+    font-weight: bolder;
   }
 }
 
