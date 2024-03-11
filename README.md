@@ -35,7 +35,7 @@ Extras:
 - Componentes feitos manualmente, sem o uso de bootstrap ou tailwind
 - Conventional Commits
 
-===========================================================================
+</br></br></br>
 
 <h2>Rodar o sistema</h2>
 
@@ -72,7 +72,7 @@ em portal localhost o projeto será aberto. Por padrão a rota será:
 http://localhost:3000/
 
 
-===========================================================================
+</br></br></br>
 
 <h2>Uso da Aplicação</h2>
 
@@ -88,7 +88,7 @@ Porém não hesite em entrar em contato comigo para expor o erro. Meus contatos
 estão no rodapé deste documento!
 
 
-===========================================================================
+</br></br></br>
 
 <h2>Melhorias</h2>
 
