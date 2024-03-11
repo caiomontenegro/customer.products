@@ -57,12 +57,16 @@ https://git-scm.com/
 
     git clone https://github.com/caiomontenegro/customer.products.git
 
-4 - Após baixar o projeto, rode o abaixo para instalar todos os pacotes
+4 - Abra o projeto no terminal:
+
+    cd customer.project
+
+5 - Após baixar o projeto, rode o abaixo para instalar todos os pacotes
 e dependencias necessários para rodar o projeto:
 
     yarn 
 
-5 - Em seguida, rode o comando abaixo, para buildar o projeto em localhost.:
+6 - Em seguida, rode o comando abaixo, para buildar o projeto em localhost.:
 
     yarn dev
 
@@ -71,6 +75,8 @@ em portal localhost o projeto será aberto. Por padrão a rota será:
 
 http://localhost:3000/
 
+Alguns terminais podem gerar conflitos, recomendo o terminal cmd do editor 
+VSCode, no qual esta aplicação foi desenvolvida.
 
 </br></br></br>
 
