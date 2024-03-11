@@ -32,23 +32,26 @@ Extras:
 - Nuxt 3 
 - Arquitetura BEM CSS 1001
 - Responsividade por mobilefirst
-- Componentes feitos manualmente, sem o uso de bootstrap ou tailwind.
+- Componentes feitos manualmente, sem o uso de bootstrap ou tailwind
+- Conventional Commits
 
-=============================================================================
+===========================================================================
 
 <h2>Rodar o sistema</h2>
 
 Tutorial para rodar a aplicação localmente:
 
 1 - Abra um terminal em sua máquina, e certifique-se de ter instalado o 
-programa de versionamento de código Git.
+programa de versionamento de código Git. Para baixar acesse:
+
+https://git-scm.com/
 
 2 - Navegue para a pasta que deseja baixar estes repositório, utilizando:
 
-cd + nome da pasta - Para avançar o diretório.
-cd .. - Para voltar um diretório
-ls - Para visualizar as pastar do diretório atual
-mkdir + "nome" - Para criar uma nova pasta com nome informado
+    cd + nome da pasta - Para avançar o diretório.
+    cd .. - Para voltar um diretório
+    ls - Para visualizar as pastar do diretório atual
+    mkdir + "nome" - Para criar uma nova pasta com nome informado
 
 3 - Rode abaixo, para baixar o projeto:
 
@@ -69,7 +72,7 @@ em portal localhost o projeto será aberto. Por padrão a rota será:
 http://localhost:3000/
 
 
-==============================================================================
+===========================================================================
 
 <h2>Uso da Aplicação</h2>
 
@@ -85,7 +88,7 @@ Porém não hesite em entrar em contato comigo para expor o erro. Meus contatos
 estão no rodapé deste documento!
 
 
-=============================================================================
+===========================================================================
 
 <h2>Melhorias</h2>
 
@@ -109,6 +112,8 @@ A principio, os testes seriam feitos, porém devido a falta de tempo para o dese
 mesmo será feito posteriormente.
 - Componenttização - Componentização do formulário, usando slots e javascripts para 
 criar os inputs e labels nas páginas.
+- Eslint - Para padronização, escalabilidade e melhoria na manutenção do código. Essencial
+para todos os tipos de desenvolvimentos.
 
 
 Contato:
