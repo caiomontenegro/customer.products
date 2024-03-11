@@ -105,7 +105,7 @@ export default {
                   {{ product.active ? product.name : null }}
                 </option>
               </FormSelect>
-              <FormButton class="formButton--green">
+              <FormButton class="formButton--blue">
                 Add item
               </FormButton>
             </div>

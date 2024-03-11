@@ -12,9 +12,9 @@
   border: solid 2px white;
   border-radius: 3px;
 
-  &--green {
+  &--blue {
     color: white;
-    background-color: rgb(94, 153, 6);
+    background-color: rgb(94, 60, 173);
   }
 
   &--red {
