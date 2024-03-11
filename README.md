@@ -13,15 +13,15 @@ Trata-se de um micro serviço CRUD, que contempla as seguintes funções:
 
 Tecnologias usadas:
 
-Javascript
-HTML
-CSS
-SASS pre processor
-Axios
-Vue.js
-Nuxt.js
-Firebase
-Gerenciamento de pacotes Yarn
+- Javascript
+- HTML
+- CSS
+- SASS pre processor
+- Axios
+- Vue.js
+- Nuxt.js
+- Firebase
+- Gerenciamento de pacotes Yarn
 
 A aplicação foi desenvolvida em inglês para prática da língua. 
 
@@ -52,7 +52,7 @@ mkdir + "nome" - Para criar uma nova pasta com nome informado
 
 3 - Rode abaixo, para baixar o projeto:
 
-    git clone ""
+    git clone https://github.com/caiomontenegro/customer.products.git
 
 4 - Após baixar o projeto, rode o abaixo para instalar todos os pacotes
 e dependencias necessários para rodar o projeto:
@@ -112,5 +112,5 @@ criar os inputs e labels nas páginas.
 
 
 Contato:
-email: caio.dev17@gmail.com
+email: caio.dev17@gmail.com </br>
 linkedin: https://www.linkedin.com/in/caio-montenegro/
